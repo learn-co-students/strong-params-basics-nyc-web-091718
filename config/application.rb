@@ -31,6 +31,7 @@ module BlogFlash
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.action_controller.permit_all_parameters = true
+    # commented out the below line that turned off Strong Params - this allowed the html code to be hacked in the browser
+    # config.action_controller.permit_all_parameters = true
   end
 end
